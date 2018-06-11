@@ -1,0 +1,16 @@
+camunda.bpm:
+  admin-user:
+    id: admin
+    password: password
+    firstName: Admin
+  filter:
+    create: All tasks
+spring:
+  flyway:
+    url: jdbc:h2:mem:flip;DB_CLOSE_ON_EXIT=FALSE
+    baseline-on-migrate: true
+datasource:
+  primary:
+    jdbc_url: jdbc:h2:mem:flip;DB_CLOSE_ON_EXIT=FALSE
+  secondary:
+    jdbc_url: jdbc:h2:mem:flip-camunda;DB_CLOSE_ON_EXIT=FALSE

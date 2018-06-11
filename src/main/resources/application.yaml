@@ -1,0 +1,19 @@
+camunda.bpm:
+  admin-user:
+    id: admin
+    password: password
+    firstName: Admin
+  filter:
+    create: All tasks
+spring:
+  flyway:
+    url: jdbc:h2:~/flip
+    user: sa
+    baseline-on-migrate: true
+datasource:
+  primary:
+    jdbc_url: jdbc:h2:~/flip
+    username: sa
+  secondary:
+    jdbc_url: jdbc:h2:~/flip-camunda
+    username: sa
